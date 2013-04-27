@@ -40,7 +40,7 @@ public class BastialBaseActivity extends Activity {
 	protected void onRestart() {
 		super.onRestart();
 		Log.d(TAG , "onRestart");
-		System.out.println("nima");
+		System.out.println("nima   ");
 	}
 
 	@Override

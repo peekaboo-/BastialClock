@@ -16,7 +16,7 @@
         <activity
             android:windowAnimationStyle="@android:style/Animation.Translucent" 
             android:name=".activity.SplashActivity" android:configChanges="keyboardHidden"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,10 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BastialBaseActivity" />
-        <activity android:name=".activity.BastialFootActivity" />
+        <activity android:name=".activity.BastialFootActivity" android:launchMode="singleTop"/>
         <activity android:name=".activity.MainActivity" android:launchMode="singleTask" />
-        <activity android:name=".activity.TestBActivity" />
-        <activity android:name=".activity.TestCActivity" />
+        <activity android:name=".activity.TestBActivity" android:launchMode="singleTop"/>
+        <activity android:name=".activity.TestCActivity" android:launchMode="singleTop"/>
     </application>
 
 </manifest>

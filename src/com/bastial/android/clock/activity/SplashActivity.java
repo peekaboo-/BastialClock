@@ -31,7 +31,7 @@ public class SplashActivity extends BastialBaseActivity {
 	}
 	
 	/**
-	 * Ìø×ªµ½Ö÷Ò³
+	 * è·³è½¬åˆ°ä¸»é¡µ
 	 */
 	private void RedirectMainActivity() {
 		Intent intent = new Intent(SplashActivity.this,MainActivity.class);

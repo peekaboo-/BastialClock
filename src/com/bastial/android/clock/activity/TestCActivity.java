@@ -17,7 +17,7 @@ public class TestCActivity extends BastialBaseActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Button button = new Button(this);
-		button.setText("不带底部菜单栏的布局（继承的类不一样）");
+		button.setText("涓嶅甫搴曢儴鑿滃崟鏍忕殑甯冨眬锛堢户鎵跨殑绫讳笉涓�鏍凤級");
 		button.setOnClickListener(new OnClickListener() {
 			
 			@Override

@@ -21,7 +21,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * »ñÈ¡µ±Ç°ÊµÀı
+	 * è·å–å½“å‰å®ä¾‹
 	 * @return
 	 */
 	public static BastialActivityManager getInstance() {
@@ -31,8 +31,8 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * »ñÈ¡µ±Ç°Õ»¶¥µÄActivity
-	 * @return Õ»¶¥µÄActivity
+	 * è·å–å½“å‰æ ˆé¡¶çš„Activity
+	 * @return æ ˆé¡¶çš„Activity
 	 */
 //	public synchronized Activity peekActivity() {
 //		Log.d(TAG, "peekActivity");
@@ -40,9 +40,9 @@ public class BastialActivityManager extends Stack<Activity> {
 //	}
 
 	/**
-	 * ´ÓÕ»ÖĞµ¯³öÕ»¶¥µÄActivity
+	 * ä»æ ˆä¸­å¼¹å‡ºæ ˆé¡¶çš„Activity
 	 * 
-	 * @return Activity ¿ÉÄÜ·µ»Ønull£¬ËùÒÔĞèÒª×öÒ»¸önull¼ì²é
+	 * @return Activity å¯èƒ½è¿”å›nullï¼Œæ‰€ä»¥éœ€è¦åšä¸€ä¸ªnullæ£€æŸ¥
 	 */
 	public synchronized void popTopActivity() {
 		if (!mActivityManager.isEmpty()) {
@@ -54,9 +54,9 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * ´ÓÕ»ÖĞµ¯³öÖ¸¶¨µÄActivity
+	 * ä»æ ˆä¸­å¼¹å‡ºæŒ‡å®šçš„Activity
 	 * 
-	 * @return Activity ¿ÉÄÜ·µ»Ønull£¬ËùÒÔĞèÒª×öÒ»¸önull¼ì²é
+	 * @return Activity å¯èƒ½è¿”å›nullï¼Œæ‰€ä»¥éœ€è¦åšä¸€ä¸ªnullæ£€æŸ¥
 	 */
 	public synchronized void popActivity(Activity activity) {
 		if (!mActivityManager.isEmpty()) {
@@ -70,7 +70,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * ½«ActivityÑ¹½øÕ»ÖĞ
+	 * å°†Activityå‹è¿›æ ˆä¸­
 	 * @param activity
 	 */
 	public synchronized void pushActivity(Activity activity) {
@@ -81,9 +81,9 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * ÅĞ¶ÏÒ»¸öActivityÊÇ·ñÒÑ¾­´æÔÚÕ»ÖĞ
-	 * @param activity Òª¼ì²éµÄActivity
-	 * @return ´æÔÚÓë·ñ
+	  * åˆ¤æ–­ä¸€ä¸ªActivityæ˜¯å¦å·²ç»å­˜åœ¨æ ˆä¸­
+	 * @param activity è¦æ£€æŸ¥çš„Activity
+	 * @return å­˜åœ¨ä¸å¦
 	 */
 	private boolean hasActivity(Activity activity) {
 		Log.d(TAG, "hasActivity");
@@ -96,9 +96,9 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * »ñµÃµ±Ç°Õ»¶¥Activity
+	 * è·å¾—å½“å‰æ ˆé¡¶Activity
 	 * 
-	 * @return µ±Ç°Î»ÓÚÕ»¶¥µÄActivity
+	 * @return å½“å‰ä½äºæ ˆé¡¶çš„Activity
 	 */
 	public Activity currentActivity() {
 		Activity activity = null;
@@ -108,7 +108,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * µ¯³öÕ»ÖĞËùÓĞµÄActivity
+	 * å¼¹å‡ºæ ˆä¸­æ‰€æœ‰çš„Activity
 	 */
 	public void popAllActivity() {
 		Log.d(TAG, "popAllActivity");

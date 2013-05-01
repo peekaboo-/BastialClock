@@ -40,7 +40,7 @@ public class BastialBaseActivity extends Activity {
 	protected void onRestart() {
 		super.onRestart();
 		Log.d(TAG , "onRestart");
-		System.out.println("nima");
+		System.out.println("nima   ");
 	}
 
 	@Override
@@ -67,14 +67,19 @@ public class BastialBaseActivity extends Activity {
 		Log.d(TAG , "onPause");
 	}
 
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		Log.d(TAG , "onKeyDown");
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			BastialActivityManager.getInstance().popActivity(this);
+//			return true;
+//		}
+//		return false;
+//	}
+	
 	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		Log.d(TAG , "onKeyDown");
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			BastialActivityManager.getInstance().popActivity(this);
-			return true;
-		}
-		return false;
+	public void onBackPressed() {
+		BastialActivityManager.getInstance().popActivity(this);
 	}
 	
 	/**

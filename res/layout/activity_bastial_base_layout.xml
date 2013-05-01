@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        layout="@layout/foot_menu_layout" />
+        layout="@layout/adapter_foot_menu_layout" />
 
     <ViewAnimator
         android:id="@+id/content_view"

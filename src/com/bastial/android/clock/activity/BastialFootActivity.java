@@ -30,7 +30,7 @@ public class BastialFootActivity extends BastialBaseActivity implements OnItemCl
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mContentLayout = getLayoutInflater().inflate(R.layout.bastial_base_layout, null);
+		mContentLayout = getLayoutInflater().inflate(R.layout.activity_bastial_base_layout, null);
 		mFootMenuGridView = (GridView) mContentLayout.findViewById(R.id.foot_menu_layout);
 		BaseAdapter adapter = new BastialFootMenuAdapter(this);
 		mFootMenuGridView.setAdapter(adapter);

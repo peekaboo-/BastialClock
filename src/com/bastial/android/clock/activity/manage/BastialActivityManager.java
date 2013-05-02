@@ -31,15 +31,6 @@ public class BastialActivityManager extends Stack<Activity> {
 	}
 
 	/**
-	 * 获取当前栈顶的Activity
-	 * @return 栈顶的Activity
-	 */
-//	public synchronized Activity peekActivity() {
-//		Log.d(TAG, "peekActivity");
-//		return mActivityManager.peek();
-//	}
-
-	/**
 	 * 从栈中弹出栈顶的Activity
 	 * 
 	 * @return Activity 可能返回null，所以需要做一个null检查

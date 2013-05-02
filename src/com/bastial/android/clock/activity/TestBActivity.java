@@ -15,6 +15,7 @@ import com.bastial.android.clock.R;
  */
 public class TestBActivity extends BastialFootActivity{
 
+	@SuppressWarnings("unused")
 	private final String TAG = "TestBActivity";
 	private Button mButtonBack = null;
 	@Override

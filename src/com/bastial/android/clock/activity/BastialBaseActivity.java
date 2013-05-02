@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 
 import com.bastial.android.clock.R;
 import com.bastial.android.clock.activity.manage.BastialActivityManager;
@@ -40,7 +39,6 @@ public class BastialBaseActivity extends Activity {
 	protected void onRestart() {
 		super.onRestart();
 		Log.d(TAG , "onRestart");
-		System.out.println("nima   ");
 	}
 
 	@Override
@@ -67,23 +65,13 @@ public class BastialBaseActivity extends Activity {
 		Log.d(TAG , "onPause");
 	}
 
-//	@Override
-//	public boolean onKeyDown(int keyCode, KeyEvent event) {
-//		Log.d(TAG , "onKeyDown");
-//		if (keyCode == KeyEvent.KEYCODE_BACK) {
-//			BastialActivityManager.getInstance().popActivity(this);
-//			return true;
-//		}
-//		return false;
-//	}
-	
 	@Override
 	public void onBackPressed() {
 		BastialActivityManager.getInstance().popActivity(this);
 	}
 	
 	/**
-	 * ÕÀ≥ˆ≥Ã–Ú
+	 *  ÈÄÄÂá∫Á®ãÂ∫è
 	 * @param context
 	 */
     public void exitApplicationDialog(final Context context) {

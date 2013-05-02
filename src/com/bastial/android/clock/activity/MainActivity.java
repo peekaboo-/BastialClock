@@ -20,9 +20,14 @@ public class MainActivity extends BastialFootActivity{
 		setContentView(R.layout.activity_main_layout);
 	}
 	
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		exitApplicationDialog(this);
+//		return true;
+//	}
+	
 	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	public void onBackPressed() {
 		exitApplicationDialog(this);
-		return true;
 	}
 }

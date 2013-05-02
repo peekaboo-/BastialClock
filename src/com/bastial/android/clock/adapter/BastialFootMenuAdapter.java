@@ -49,7 +49,7 @@ public class BastialFootMenuAdapter extends BaseAdapter {
 		Holder holder = null;
 		if (convertView == null) {
 			holder = new Holder();
-			convertView = mFootMenuLayout = LayoutInflater.from(mContext).inflate(R.layout.foot_menu_content_layout, null);
+			convertView = mFootMenuLayout = LayoutInflater.from(mContext).inflate(R.layout.item_foot_menu_layout, null);
 			holder.imageview_menu_icon = (ImageView) convertView.findViewById(R.id.imageview_menu_icon);
 			holder.textview_menu_text = (TextView) convertView.findViewById(R.id.textview_menu_text);
 			convertView.setTag(holder);

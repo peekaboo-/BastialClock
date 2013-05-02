@@ -21,7 +21,7 @@ public class SplashActivity extends BastialBaseActivity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);  
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
-		setContentView(R.layout.splash);
+		setContentView(R.layout.activity_splash);
 		
 		new Handler().postDelayed(new Runnable() {
 			public void run() {
@@ -31,7 +31,7 @@ public class SplashActivity extends BastialBaseActivity {
 	}
 	
 	/**
-	 * Ìø×ªµ½Ö÷Ò³
+	 * è·³è½¬åˆ°ä¸»é¡µ
 	 */
 	private void RedirectMainActivity() {
 		Intent intent = new Intent(SplashActivity.this,MainActivity.class);

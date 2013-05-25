@@ -1,10 +1,10 @@
 package com.bastial.android.clock.activity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import com.bastial.android.clock.R;
@@ -15,7 +15,7 @@ import com.bastial.android.clock.activity.manage.BastialActivityManager;
  * @author peekaboo
  * 
  */
-public class BastialBaseActivity extends Activity {
+public class BastialBaseActivity extends FragmentActivity {
 
 	private final String TAG = "BastialBaseActivity";
 	

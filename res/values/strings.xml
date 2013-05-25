@@ -8,5 +8,14 @@
     <string name="exit_dialog_title">退出</string>
     <string name="btn_ok">确定</string>
     <string name="btn_cancel">取消</string>
+    
+    <!-- FootActivity -->
+    <string name="activity_foot_menu_one">时间</string>
+    <string name="activity_foot_menu_two">闹钟列表</string>
+    <string name="activity_foot_menu_three">设置</string>
+    
+    <!-- ClockListActivity -->
+    <string name="clock_list_header">闹钟列表</string>
+    <string name="empty_clock">没有闹钟，快去添加吧！</string>
 
 </resources>    

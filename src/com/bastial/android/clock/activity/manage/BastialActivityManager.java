@@ -3,6 +3,7 @@ package com.bastial.android.clock.activity.manage;
 import java.util.Stack;
 
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 /**
@@ -10,14 +11,16 @@ import android.util.Log;
  * @author Peekaboo
  * 
  */
-public class BastialActivityManager extends Stack<Activity> {
+public class BastialActivityManager extends Stack<FragmentActivity> {
 	private static final long serialVersionUID = 1L;
 	private final String TAG = "BastialActivityManager";
 	private static BastialActivityManager mInstance = null;
-	private Stack<Activity> mActivityManager = null;
+	private Stack<FragmentActivity> mActivityManager = null;
+	
+	
 
 	private BastialActivityManager() {
-		mActivityManager = new Stack<Activity>();
+		mActivityManager = new Stack<FragmentActivity>();
 	}
 
 	/**
@@ -37,7 +40,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	 */
 	public synchronized void popTopActivity() {
 		if (!mActivityManager.isEmpty()) {
-			Activity activity = mActivityManager.pop();
+			FragmentActivity activity = mActivityManager.pop();
 			if (activity != null) {
 				activity.finish();
 			}
@@ -49,7 +52,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	 * 
 	 * @return Activity 可能返回null，所以需要做一个null检查
 	 */
-	public synchronized void popActivity(Activity activity) {
+	public synchronized void popActivity(FragmentActivity activity) {
 		if (!mActivityManager.isEmpty()) {
 			if (hasActivity(activity)) {
 				mActivityManager.remove(activity);
@@ -64,7 +67,7 @@ public class BastialActivityManager extends Stack<Activity> {
 	 * 将Activity压进栈中
 	 * @param activity
 	 */
-	public synchronized void pushActivity(Activity activity) {
+	public synchronized void pushActivity(FragmentActivity activity) {
 		Log.d(TAG, "pushActivity");
 		if (!hasActivity(activity)) {
 			mActivityManager.push(activity);
@@ -76,9 +79,9 @@ public class BastialActivityManager extends Stack<Activity> {
 	 * @param activity 要检查的Activity
 	 * @return 存在与否
 	 */
-	private boolean hasActivity(Activity activity) {
+	private boolean hasActivity(FragmentActivity activity) {
 		Log.d(TAG, "hasActivity");
-		for (Activity mActivity : mActivityManager) {
+		for (FragmentActivity mActivity : mActivityManager) {
 			if (mActivity.getClass().equals(activity.getClass())) {
 				return true;
 			}
@@ -91,8 +94,8 @@ public class BastialActivityManager extends Stack<Activity> {
 	 * 
 	 * @return 当前位于栈顶的Activity
 	 */
-	public Activity currentActivity() {
-		Activity activity = null;
+	public FragmentActivity currentActivity() {
+		FragmentActivity activity = null;
 		if (!mActivityManager.empty())
 			activity = mActivityManager.peek();
 		return activity;
@@ -104,10 +107,10 @@ public class BastialActivityManager extends Stack<Activity> {
 	public void popAllActivity() {
 		Log.d(TAG, "popAllActivity");
 		while (mActivityManager.size() > 0) {
-			Activity mainActivity = mActivityManager.peek();
+			FragmentActivity mainActivity = mActivityManager.peek();
 			mActivityManager.remove(mainActivity);
 			while (!mActivityManager.isEmpty()) {
-				Activity activity = mActivityManager.peek();
+				FragmentActivity activity = mActivityManager.peek();
 				if (activity.getClass().equals(mainActivity.getClass())) {
 					break;
 				}

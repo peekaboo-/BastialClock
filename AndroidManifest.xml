@@ -28,6 +28,7 @@
         <activity android:name=".activity.MainActivity" android:launchMode="singleTask" />
         <activity android:name=".activity.TestBActivity" android:launchMode="singleTop"/>
         <activity android:name=".activity.TestCActivity" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ClockListActivity" android:launchMode="singleTop" />
     </application>
 
 </manifest>

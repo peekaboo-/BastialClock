@@ -4,12 +4,69 @@
     android:layout_height="fill_parent"
     android:background="#ffffffff" >
 
-    <include
+    <LinearLayout 
         android:id="@+id/foot_menu_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        layout="@layout/adapter_foot_menu_layout" />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        
+        <RelativeLayout 
+            android:id="@+id/clock_layer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center">
+		    <TextView
+		        android:id="@+id/clock_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:drawablePadding="1dp"
+		        android:text="@string/activity_foot_menu_one"
+		        android:textColor="#000000"
+		        android:drawableTop="@drawable/ic_launcher" />
+		</RelativeLayout>
+		<RelativeLayout 
+            android:id="@+id/clock_list_layer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center">
+		    <TextView
+		        android:id="@+id/clock_list_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:drawablePadding="1dp"
+		        android:text="@string/activity_foot_menu_two"
+		        android:textColor="#000000"
+		        android:drawableTop="@drawable/ic_launcher" />
+		</RelativeLayout>
+		<RelativeLayout 
+            android:id="@+id/clock_set_layer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center">
+		    <TextView
+		        android:id="@+id/clock_set_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:drawablePadding="1dp"
+		        android:text="@string/activity_foot_menu_three"
+		        android:textColor="#000000"
+		        android:drawableTop="@drawable/ic_launcher" />
+		</RelativeLayout>
+        
+    </LinearLayout>
 
     <ViewAnimator
         android:id="@+id/content_view"

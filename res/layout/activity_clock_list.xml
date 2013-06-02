@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffff">
+    
+     <RelativeLayout
+        android:id="@+id/head_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bg"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            style="@style/TextXXLNormal"
+            android:layout_centerInParent="true"
+            android:text="@string/clock_list_header" />
+
+    </RelativeLayout>
+    
+     <RelativeLayout 
+         android:id="@+id/clock_list_layer"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_below="@id/head_layer">
+         
+         <ListView 
+	         android:id="@+id/clock_list"
+	         android:layout_width="fill_parent"
+	         android:layout_height="fill_parent"
+	         android:dividerHeight="1px"/>
+         
+          <LinearLayout 
+              	android:id="@+id/empty_layer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+                
+                <ImageView 
+                    android:id="@+id/add_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"/>
+                
+                <TextView 
+                    android:id="@+id/empty_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"/>
+                
+            </LinearLayout>
+         
+     </RelativeLayout>
+    
+     <RelativeLayout 
+         android:id="@+id/loader_layer"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_below="@id/head_layer"
+         android:background="#55000000"
+         android:visibility="gone">
+         
+          <ProgressBar
+	         android:id="@+id/loader"
+	         style="?android:attr/progressBarStyleLarge"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_centerInParent="true"
+	         android:layout_below="@+id/clock_list"/>
+         
+     </RelativeLayout>
+
+    
+
+</RelativeLayout>

@@ -34,7 +34,7 @@ public class SplashActivity extends BastialBaseActivity {
 	 * 跳转到主页
 	 */
 	private void RedirectMainActivity() {
-		Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+		Intent intent = new Intent(SplashActivity.this,ClockListActivity.class);
 		startActivity(intent);
 		finish();
 	}

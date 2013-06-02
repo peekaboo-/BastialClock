@@ -8,5 +8,23 @@
     <string name="exit_dialog_title">退出</string>
     <string name="btn_ok">确定</string>
     <string name="btn_cancel">取消</string>
-
+    
+    <!-- FootActivity -->
+    <string name="activity_foot_menu_one">时间</string>
+    <string name="activity_foot_menu_two">闹钟列表</string>
+    <string name="activity_foot_menu_three">设置</string>
+    
+    <!-- ClockListActivity -->
+    <string name="clock_list_header">闹钟列表</string>
+    <string name="empty_clock">没有闹钟，快去添加吧！</string>
+    
+    <!-- SetActivity -->
+	<string name="set_chose_clock_state">选择提醒类型：</string>
+	<string name="set_chose_clock_ring">选择闹钟默认铃声：</string>
+	<string name="set_chose_clock_day">选择闹钟响铃日期：</string>
+	<string name="set_about">关于我们</string>
+	
+	<!-- common -->
+	<string name="common_look">浏览</string>
+	
 </resources>    

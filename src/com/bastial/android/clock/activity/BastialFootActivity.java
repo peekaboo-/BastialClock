@@ -5,35 +5,46 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ViewAnimator;
 
 import com.bastial.android.clock.R;
-import com.bastial.android.clock.adapter.BastialFootMenuAdapter;
 
 /**
  * 
  * @author Peekaboo
  *
  */
-public class BastialFootActivity extends BastialBaseActivity implements OnItemClickListener {
+public class BastialFootActivity extends BastialBaseActivity implements OnClickListener {
 
 	private final String TAG = "BastialFootActivity";
-	private GridView mFootMenuGridView = null;
+	private LinearLayout mFootMenuGridView = null;
+	private RelativeLayout mClockLayer, mClockListLayer, mClockSetLayer;
 	View mContentLayout = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		initUI();
+	}
+
+	private void initUI() {
 		mContentLayout = getLayoutInflater().inflate(R.layout.activity_bastial_base_layout, null);
-		mFootMenuGridView = (GridView) mContentLayout.findViewById(R.id.foot_menu_layout);
-		BaseAdapter adapter = new BastialFootMenuAdapter(this);
-		mFootMenuGridView.setAdapter(adapter);
-		mFootMenuGridView.setOnItemClickListener(this);
+		mFootMenuGridView = (LinearLayout) mContentLayout.findViewById(R.id.foot_menu_layout);
+		mClockLayer = (RelativeLayout) mContentLayout.findViewById(R.id.clock_layer);
+		mClockListLayer = (RelativeLayout) mContentLayout.findViewById(R.id.clock_list_layer);
+		mClockSetLayer = (RelativeLayout) mContentLayout.findViewById(R.id.clock_set_layer);
+		
+		mClockLayer.setOnClickListener(this);
+		mClockListLayer.setOnClickListener(this);
+		mClockSetLayer.setOnClickListener(this);
+		
 	}
 
 	@Override
@@ -57,26 +68,30 @@ public class BastialFootActivity extends BastialBaseActivity implements OnItemCl
 		super.setContentView(mContentLayout, params);
 	}
 
+
+	/**
+	 * 点击事件
+	 */
 	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		Log.d(TAG , "onItemClick>>>>position = " + position);
+	public void onClick(View v) {
 		Intent intent = null;
-		switch (position) {
-		case 0:
+		switch (v.getId()) {
+		case R.id.clock_layer:
 			intent = new Intent(BastialFootActivity.this, MainActivity.class);
 			startActivity(intent);
 			break;
-		case 1:
-			intent = new Intent(BastialFootActivity.this, TestBActivity.class);
+		case R.id.clock_list_layer:
+			intent = new Intent(BastialFootActivity.this, ClockListActivity.class);
 			startActivity(intent);
 			break;
-		case 2:
-			intent = new Intent(BastialFootActivity.this, TestCActivity.class);
+		case R.id.clock_set_layer:
+			intent = new Intent(BastialFootActivity.this, ClockSetActivity.class);
 			startActivity(intent);
 			break;
 
 		default:
 			break;
 		}
+		
 	}
 }

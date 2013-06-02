@@ -85,7 +85,8 @@ public class BastialFootActivity extends BastialBaseActivity implements OnClickL
 			startActivity(intent);
 			break;
 		case R.id.clock_set_layer:
-			
+			intent = new Intent(BastialFootActivity.this, ClockSetActivity.class);
+			startActivity(intent);
 			break;
 
 		default:

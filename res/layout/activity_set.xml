@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    
+    <RelativeLayout
+        android:id="@+id/head_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bg"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            style="@style/TextXXLNormal"
+            android:layout_centerInParent="true"
+            android:text="@string/activity_foot_menu_three" />
+
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/set_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/head_layer"
+        android:layout_margin="10dp"
+        android:background="@drawable/frame" >
+        
+        <RelativeLayout 
+            android:id="@+id/remind_state_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+            
+             <TextView 
+	           android:id="@+id/set_remind_state"
+	           style="@style/TextXXLNormal"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_centerVertical="true"
+	           android:text="@string/set_chose_clock_state" />
+             
+             <Spinner 
+                  android:id="@+id/remind_state_spinner" 
+	              android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_marginRight="5dp"	
+	              android:layout_centerVertical="true"
+                  android:layout_toRightOf="@id/set_remind_state"/>
+            
+        </RelativeLayout>
+         <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#5e5e5e"/>
+        
+          <RelativeLayout 
+            android:id="@+id/remind_ring_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+             android:padding="10dp">
+            
+             <TextView 
+	           android:id="@+id/set_remind_ring"
+	           style="@style/TextXXLNormal"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_centerVertical="true"
+	           android:text="@string/set_chose_clock_ring" />
+             
+             <Button 
+                 android:id="@+id/look_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:padding="5dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:text="@string/common_look"/>
+             
+             <Spinner 
+                  android:id="@+id/remind_ring_spinner" 
+	              android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_marginRight="5dp"	
+	              android:layout_centerVertical="true"
+                  android:layout_toLeftOf="@id/look_btn"
+                  android:layout_toRightOf="@id/set_remind_ring"/>
+            
+        </RelativeLayout>
+         <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#5e5e5e"/>
+        
+        <RelativeLayout 
+	        android:id="@+id/remind_day_layer"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         android:padding="10dp" >
+            
+             <TextView 
+	           android:id="@+id/set_remind_day"
+	           style="@style/TextXXLNormal"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_centerVertical="true"
+	           android:text="@string/set_chose_clock_day" />
+             
+             <Spinner 
+                  android:id="@+id/remind_day_spinner" 
+	              android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_marginRight="5dp"	
+	              android:layout_centerVertical="true"
+                  android:layout_toRightOf="@id/set_remind_day"/>
+            
+        </RelativeLayout>
+        
+         <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#5e5e5e"/>
+         
+          <RelativeLayout 
+	        android:id="@+id/remind_about_layer"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         android:padding="10dp" >
+            
+             <TextView 
+	           android:id="@+id/set_about"
+	           style="@style/TextXXLNormal"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_centerVertical="true"
+	           android:text="@string/set_about" />
+             
+            
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>

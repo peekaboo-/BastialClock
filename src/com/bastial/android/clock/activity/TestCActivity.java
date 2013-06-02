@@ -1,4 +1,4 @@
-package com.bastial.android.clock.activity;
+﻿package com.bastial.android.clock.activity;
 
 
 import android.os.Bundle;
@@ -22,6 +22,7 @@ public class TestCActivity extends BastialBaseActivity{
 			
 			@Override
 			public void onClick(View v) {
+				System.out.println("nima");
 			}
 		});
 		setContentView(button);
